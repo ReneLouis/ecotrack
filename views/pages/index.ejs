@@ -1,0 +1,52 @@
+
+<header>
+  <h1>Welcome</h1>
+</header>
+
+<main>
+  <section class="description">
+    <!-- description of site -->
+    <p>This is the maintenance log vehicles.</p>
+    
+  <!-- LIST OF VEHICLES -->
+  <section id="content" class="vehicle-list">
+
+    <% vehicleList.forEach(function(e) { %>
+        <section class="vehicle-box">
+          <h4><%= e.name%>: </h4>
+          <div class="links">
+            <a href="/summary/<%= e.shortname %>">Summary</a>
+            <a href="/fueling/<%= e.shortname %>">Fuel Top-Up</a> 
+          </div>
+        </section>
+      
+    <% }) %>
+    
+  </section>
+  <!-- ADD NEW VEHICLE -->
+  <section id="" class="new-vehicle">
+
+    <button id="newVehicleButton" onclick="showNewVehichleForm()">Add New Vehicle Button</button>
+
+    <!-- FORM TO ENTER NEW VEHICHLE DATA -->
+    <section hidden id="newVehicleForm" >
+      
+      <form class="fuel-form" method="POST" action="/">
+        <label for="name">Name:</label> </br>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Vehicle Name" 
+        />
+        <br />
+        
+        <input type="submit" value="Click to create new vehicle" id="cancel"/>
+      </form>
+      <button id="cancel" onclick="cancelFormSubmission()">Cancel</button>
+    </section>
+
+  </section>
+</main>
+
+    

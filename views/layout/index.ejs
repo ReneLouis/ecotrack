@@ -1,0 +1,36 @@
+<!--<html>-->
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+  <head>
+    <title><%= pageTitle %></title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="René Louis" />
+    <meta name="description" content="Maintenance log for selected vehicle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/stylesheet.css" type="text/css" media="all" />
+    <!-- <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script> -->
+    <!-- <script src="js/fuelTopUp.js" defer></script> -->
+    <script>
+      /* SHOW FORM TO INPUT NEW VEHICLE DETAILS */
+      function showNewVehichleForm() {
+        console.log("function showNewVehicleForm launched.");
+        document.querySelector("#newVehicleForm").hidden = false;
+      }
+      function cancelFormSubmission() {
+        document.querySelector("#newVehicleForm").hidden = true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <a hidden class="skip-link screen-reader-text" href="#content"
+      >Skip to content</a
+    >
+
+    <%- include(`../pages/${template}`)%>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+/* =================== GENERAL SET UP: BOX SIZING ================ */
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======================= COLOR PALETTE ======================= */
+:root {
+  --background: hsla(0, 0%, 40%, 0.7); /* Platinium */
+  --border: hsla(0, 79%, 49%, 0.8); /* Maximum Red*/
+  --text: hsla(51, 35%, 15%, 1); /* Olive Drab*/
+  --highlight: hsla(37, 98%, 53%, 1); /* Orange Web */
+}
+
+/* =================== CENTER BODY =============================*/
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  background-image: url(images/alu.svg);
+  object-fit: contain;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding: 0 1rem;
+}
+
+/* ======================= MAIN ================================*/
+header,
+main {
+  margin-top: 0.5rem;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border-style: inset;
+  border-color: var(--border);
+  padding: 0.5rem;
+}
+
+h1,
+h3 {
+  color: var(--border);
+  text-shadow: whitesmoke 0.2rem 0.2rem 1rem;
+}
+
+section.vehicle-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.vehicle-box > h4 {
+  display: inline-block;
+  flex: 2 1 200px;
+}
+section.vehicle-box > div.links {
+  flex: 0 1 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+section.vehicle-box > div.links > a {
+  /* display: block; */
+  flex: 1 0 5.5rem;
+  border: 1px yellow;
+}
+
+p,
+h4 {
+  color: var(--text);
+}
